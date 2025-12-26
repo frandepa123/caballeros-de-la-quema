@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: rgb(82, 0, 0);
+    color: rgb(172, 132, 0);
+    width: 100%;
+    padding: 30px 15px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: rgb(172, 132, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ===== SECCIONES ===== */
+.section-box {
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+/* ===== IMÁGENES MISMO TAMAÑO ===== */
+.img-standard {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* LISTAS*/
+.canciones,
+.integrantes {
+    background-color: rgb(82, 0, 0);
+    color: rgb(172, 132, 0);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.canciones li,
+.integrantes li {
+    margin-bottom: 8px;
+}
+
+/*GRID*/
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARDS */
+.card {
+    background-color: rgb(82, 0, 0);
+    color: rgb(172, 132, 0);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* FOOTER*/
+footer {
+    background-color: rgb(82, 0, 0);
+    color: rgb(172, 132, 0);
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-standard {
+        max-width: 100%;
+    }
+}
